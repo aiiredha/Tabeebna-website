@@ -26,13 +26,12 @@ description: Current internships, workshops, and events open to high school stud
         {% endfor %}
       </div>
     {% else %}
-      <div class="empty-state">
-        <p>No opportunities are posted right now — check back soon.</p>
-      </div>
+      <p>There are no open opportunities right now — check back later.</p>
     {% endif %}
   </div>
 </section>
 
+{% if opportunities.length > 0 %}
 <section class="section section--mist">
   <div class="wrap grid grid--2">
     <div>
@@ -42,3 +41,4 @@ description: Current internships, workshops, and events open to high school stud
     </div>
   </div>
 </section>
+{% endif %}
