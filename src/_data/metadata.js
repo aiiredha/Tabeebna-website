@@ -1,3 +1,3 @@
 module.exports = {
-  url: "https://tabeebna.bh",
+  url: "https://www.tabeebna.bh",
 };
