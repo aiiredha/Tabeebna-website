@@ -4,6 +4,10 @@ module.exports = function (eleventyConfig) {
   // Copy static assets straight through to the output folder
   eleventyConfig.addPassthroughCopy("src/assets");
 
+  // Copy the custom-domain CNAME file straight to the output root, required
+  // by GitHub Pages to serve the site at tabeebna.bh
+  eleventyConfig.addPassthroughCopy("src/CNAME");
+
   // Friendly date filter for templates, e.g. {{ opportunity.deadline | niceDate }}
   eleventyConfig.addFilter("niceDate", (isoDate) => {
     return DateTime.fromISO(isoDate).toFormat("LLLL d, yyyy");

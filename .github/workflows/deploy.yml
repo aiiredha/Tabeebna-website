@@ -30,12 +30,6 @@ jobs:
         run: npm ci
 
       - name: Build site
-        # PATH_PREFIX is only needed if you're serving from
-        # https://<user>.github.io/tabeebna-website/ (a project site without
-        # a custom domain). Once tabeebna.bh is connected via CNAME, delete
-        # this env line entirely.
-        env:
-          PATH_PREFIX: "/Tabeebna-website/"
         run: npx @11ty/eleventy
 
       - name: Upload artifact
