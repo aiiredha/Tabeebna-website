@@ -21,7 +21,7 @@ description: Current internships, workshops, and events open to high school stud
             </div>
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p>
-            <a class="btn btn-outline" href="{{ item.applyLink }}" target="_blank" rel="noopener">Apply</a>
+            {% include "opportunity-actions.njk" %}
           </article>
         {% endfor %}
       </div>

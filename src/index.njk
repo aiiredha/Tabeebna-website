@@ -10,7 +10,6 @@ description: Tabeebna is a Bahrain-based student-run nonprofit helping high scho
     <p class="lede">Tabeebna connects high schoolers with internships, career-exposure events, and workshops led by students who've walked the same path — giving them a clearer, more confident view of what their future career could look like.</p>
     <div class="hero__actions">
       <a class="btn btn-primary" href="{{ '/programs/' | url }}">See open opportunities</a>
-      <a class="btn btn-ghost" href="{{ '/apply/' | url }}">Apply now</a>
     </div>
   </div>
   {% include "skyline.njk" %}
@@ -40,7 +39,7 @@ description: Tabeebna is a Bahrain-based student-run nonprofit helping high scho
             </div>
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p>
-            <a class="btn btn-outline" href="{{ item.applyLink }}" target="_blank" rel="noopener">Apply</a>
+            {% include "opportunity-actions.njk" %}
           </article>
         {% endfor %}
       </div>

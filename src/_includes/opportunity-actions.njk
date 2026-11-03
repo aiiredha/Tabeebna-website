@@ -1,0 +1,13 @@
+{# Buttons for an opportunity card. A listing can have a "links" list (one button per
+   entry, e.g. Register a team / Get a spectator ticket) or just the single applyLink. #}
+{% if item.links and item.links.length > 0 %}
+  <div class="opportunity-card__actions">
+    {% for link in item.links %}
+      <a class="btn {% if loop.first %}btn-primary{% else %}btn-outline{% endif %}" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+    {% endfor %}
+  </div>
+{% elif item.applyLink %}
+  <div class="opportunity-card__actions">
+    <a class="btn btn-outline" href="{{ item.applyLink }}" target="_blank" rel="noopener">Apply</a>
+  </div>
+{% endif %}
